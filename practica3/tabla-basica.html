@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planetas — Tabla básica</title>
+  <!-- CSS interno según consigna (tema claro, sin hover) -->
+  <style>
+    :root {
+      --bg:#f8fafc;
+      --fg:#111827;
+      --accent:#2563eb;
+      --muted:#6b7280;
+      --row1:#ffffff;
+      --row2:#f9fafb;
+      --row3:#f3f4f6;
+      --header-bg:#1d4ed8;
+      --header-fg:#ffffff;
+      --link:#2563eb;
+      --border:#e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height:1.5;
+    }
+    header { padding: 1rem 1rem 0; }
+    h1 { margin: .2rem 0 .6rem; font-size: 1.6rem; }
+    nav a {
+      color: var(--link);
+      text-decoration: none;
+      margin-right: .9rem;
+      font-size: .95rem;
+      padding:.3rem .5rem;
+      border-radius:.5rem;
+      border:1px solid transparent; /* sin efecto hover */
+    }
+    nav a.active { font-weight: 700; background:rgba(37,99,235,.12); border-color:var(--link) }
+    .wrap { max-width: 1000px; margin: 1rem auto; padding: 0 1rem; }
+    .table-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background:#fff;
+    }
+    thead th {
+      background: var(--header-bg);
+      color: var(--header-fg);
+      text-align: left;
+      padding: .85rem 1rem;
+      font-weight: 700;
+      border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+    tbody td {
+      padding: .8rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--fg);
+    }
+    /* Tres estilos alternados por renglón */
+    tbody tr:nth-child(3n+1) { background: var(--row1); }
+    tbody tr:nth-child(3n+2) { background: var(--row2); }
+    tbody tr:nth-child(3n+3) { background: var(--row3); }
+    /* sin hover en filas */
+    .note { color: var(--muted); font-size: .92rem; margin-top: .6rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tabla básica (CSS interno)</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="tabla-basica.html" class="active">Tabla básica</a>
+      <a href="tabla-estilo.html">Tabla con estilo</a>
+      <a href="galeria.html">Galería</a>
+      <a href="https://www.nasa.gov/" target="_blank" rel="noopener">NASA</a>
+      <a href="https://www.esa.int/" target="_blank" rel="noopener">ESA</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Planeta</th>
+            <th>Distancia al Sol (10⁶ km)</th>
+            <th>Diámetro (km)</th>
+            <th>Tipo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Mercurio</td><td>58</td><td>4,879</td><td>Rocoso</td></tr>
+          <tr><td>Venus</td><td>108</td><td>12,104</td><td>Rocoso</td></tr>
+          <tr><td>Tierra</td><td>150</td><td>12,742</td><td>Rocoso</td></tr>
+          <tr><td>Marte</td><td>228</td><td>6,779</td><td>Rocoso</td></tr>
+          <tr><td>Júpiter</td><td>779</td><td>139,820</td><td>Gaseoso</td></tr>
+          <tr><td>Saturno</td><td>1,433</td><td>116,460</td><td>Gaseoso</td></tr>
+          <tr><td>Urano</td><td>2,872</td><td>50,724</td><td>Gigante helado</td></tr>
+          <tr><td>Neptuno</td><td>4,495</td><td>49,244</td><td>Gigante helado</td></tr>
+          <tr><td>Plutón</td><td>5,906</td><td>2,377</td><td>Enano</td></tr>
+          <tr><td>Ceres</td><td>414</td><td>946</td><td>Enano</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Encabezado contrastante y tres estilos alternados por renglón (CSS interno).</p>
+    </div>
+  </main>
+</body>
+</html>

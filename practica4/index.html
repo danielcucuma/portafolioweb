@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manejo de elementos HTML con JavaScript</title>
+</head>
+<body>
+  <h1>Manejo de elementos HTML con JavaScript</h1>
+
+  <!-- 1) Equivalencia de calificación -->
+  <section>
+    <h2>Equivalencia de calificación</h2>
+    <form id="gradeForm">
+      <label for="gradeInput">Calificación (0 a 10):</label>
+      <input id="gradeInput" name="grade" type="number" step="0.01" min="0" max="10" required />
+      <button type="submit">Evaluar</button>
+    </form>
+    <p id="gradeResult"></p>
+  </section>
+
+  <hr/>
+
+  <!-- 2) Factorial recursivo -->
+  <section>
+    <h2>Factorial (recursivo)</h2>
+    <form id="factForm">
+      <label for="factInput">Número entero (≥ 0):</label>
+      <input id="factInput" name="n" type="number" step="1" min="0" required />
+      <button type="submit">Calcular factorial</button>
+    </form>
+    <p id="factResult"></p>
+  </section>
+
+  <hr/>
+
+  <!-- 3) Formulario general -->
+  <section>
+    <h2>Formulario de datos</h2>
+    <form id="infoForm">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" name="nombre" type="text" required />
+      </div>
+
+      <div>
+        <label for="correo">Correo:</label>
+        <input id="correo" name="correo" type="email" required />
+      </div>
+
+      <div>
+        <label for="edad">Edad:</label>
+        <input id="edad" name="edad" type="number" min="0" required />
+      </div>
+
+      <fieldset>
+        <legend>Género:</legend>
+        <label><input type="radio" name="genero" value="Femenino" required /> Femenino</label>
+        <label><input type="radio" name="genero" value="Masculino" /> Masculino</label>
+        <label><input type="radio" name="genero" value="Otro" /> Otro</label>
+      </fieldset>
+
+      <div>
+        <label for="nacimiento">Fecha de nacimiento:</label>
+        <input id="nacimiento" name="nacimiento" type="date" required />
+      </div>
+
+      <div>
+        <label for="color">Color favorito:</label>
+        <input id="color" name="color" type="color" value="#3b82f6" />
+      </div>
+
+      <button type="submit">Imprimir</button>
+    </form>
+    <p id="infoResult"></p>
+  </section>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

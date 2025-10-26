@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulario → Tabla</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Captura de datos</h1>
+
+    <form id="dataForm" novalidate>
+      <div class="field">
+        <label for="nombre">Nombre (text)</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" />
+      </div>
+
+      <div class="field">
+        <label for="correo">Correo (email)</label>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@dominio.com" />
+      </div>
+
+      <fieldset class="field">
+        <legend>Intereses (checkbox, elige al menos uno)</legend>
+        <label><input type="checkbox" name="intereses" value="Opción A" /> Opción A</label>
+        <label><input type="checkbox" name="intereses" value="Opción B" /> Opción B</label>
+        <label><input type="checkbox" name="intereses" value="Opción C" /> Opción C</label>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend>Preferencia (radio, elige una)</legend>
+        <label><input type="radio" name="preferencia" value="Rojo" /> Rojo</label>
+        <label><input type="radio" name="preferencia" value="Verde" /> Verde</label>
+        <label><input type="radio" name="preferencia" value="Azul" /> Azul</label>
+      </fieldset>
+
+      <div class="field">
+        <label for="cita">Fecha y hora (datetime-local)</label>
+        <input type="datetime-local" id="cita" name="cita" />
+      </div>
+
+      <div class="field">
+        <label for="color">Color favorito (color)</label>
+        <input type="color" id="color" name="color" value="#1e90ff" />
+      </div>
+
+      <div class="field">
+        <label for="nivel">Nivel (range)</label>
+        <div class="range-wrap">
+          <input type="range" id="nivel" name="nivel" min="0" max="100" step="1" value="50" />
+          <output id="nivelOut" for="nivel">50</output>
+        </div>
+      </div>
+
+      <div class="actions">
+        <!-- El botón llama a la función JS para validar e insertar -->
+        <button type="button" id="btnAgregar" onclick="handleSubmit(event)">Agregar a la tabla</button>
+      </div>
+
+      <!-- Área para mostrar errores de validación -->
+      <div id="errors" class="errors" aria-live="polite"></div>
+    </form>
+
+    <h2>Tabla de registros</h2>
+    <div class="table-wrap">
+      <table id="dataTable" class="striped hoverable">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Intereses</th>
+            <th>Preferencia</th>
+            <th>Fecha/Hora</th>
+            <th>Color</th>
+            <th>Nivel</th>
+          </tr>
+        </thead>
+        <tbody id="dataTableBody">
+          <!-- Las filas nuevas se insertan aquí -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

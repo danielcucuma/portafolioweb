@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Futbol y Jugadores</title>
+</head>
+<body>
+  <!-- Encabezados -->
+  <h1>Cristiano </h1>
+  <h1>Messi </h1>
+  <h2>Neymar</h2>
+  <h2>Ronaldinho</h2>
+  <h3>Modric</h3>
+  <h3>Courtois</h3>
+  <h4>Sergio Ramos</h4>
+  <h4>Rafa Marques</h4>
+  <h5>Marcelo</h5>
+  <h5>Kaka</h5>
+  <h6>Iniesta</h6>
+  <h6>Totti</h6>
+
+  <hr>
+
+  <!-- Lista ordenada con 10 elementos -->
+  <section>
+    <h2>Lista ordenada 10 equipos por orden </h2>
+    <ol>
+      <li>Real Madrid </li>
+      <li>Fc Barcelona</li>
+      <li>Man United</li>
+      <li>Bayern Munich</li>
+      <li>Liverpool FC</li>
+      <li>Juventus</li>
+      <li>Psg</li>
+      <li>Chelsea</li>
+      <li>Manchester city</li>
+      <li>Arsenal</li>
+    </ol>
+  </section>
+
+  <!-- Lista no ordenada con 10 elementos -->
+  <section>
+    <h2>Lista no ordenada 10 equipos liga mx </h2>
+    <ul>
+      <li>Pachuca</li>
+      <li>Monterrey</li>
+      <li>Cruz Azul</li>
+      <li>America</li>
+      <li>Toluca</li>
+      <li>Tijuana</li>
+      <li>Santos</li>
+      <li>Leon</li>
+      <li>Necaxa</li>
+      <li>Pumas</li>
+    </ul>
+  </section>
+
+  <!-- Lista descriptiva con 5 elementos -->
+  <section>
+    <h2>Mejores equipos por continente</h2>
+    <dl>
+      <dt>America</dt>
+      <dd>Peñarol</dd>
+
+      <dt>Europa</dt>
+      <dd>Real Madrid</dd>
+
+      <dt>Asia</dt>
+      <dd>Al Hilal</dd>
+
+      <dt>Oceania</dt>
+      <dd>South Melbourne</dd>
+
+      <dt>Africa</dt>
+      <dd>Kumasi Asante Kotoko</dd>
+    </dl>
+  </section>
+
+  <hr>
+
+  <!-- Formulario -->
+  <section>
+    <h2>Formulario</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <!-- Tres campos de texto -->
+      <fieldset>
+        <legend>Informacion</legend>
+
+        <label for="texto1">Nombre </label>
+        <input type="text" id="texto1" name="texto1" placeholder="Escribe aquí..." />
+
+        <label for="texto2">Apellido paterno</label>
+        <input type="text" id="texto2" name="texto2" placeholder="Escribe aquí..." />
+
+        <label for="texto3">Apellido materno</label>
+        <input type="text" id="texto3" name="texto3" placeholder="Escribe aquí..." />
+      </fieldset>
+
+      <!-- Campo de contraseña -->
+      <fieldset>
+        <legend>Contraseña</legend>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+      </fieldset>
+
+      <!-- Campo numérico -->
+      <fieldset>
+        <legend>Edad</legend>
+
+        <label for="numero">Número</label>
+        <input type="number" id="numero" name="numero" min="0" max="100" step="1" />
+      </fieldset>
+
+      <!-- Campo de fecha (HTML5) -->
+      <fieldset>
+        <legend>Nacimiento</legend>
+
+        <label for="fecha">Selecciona una fecha</label>
+        <input type="date" id="fecha" name="fecha" />
+      </fieldset>
+
+      <!-- Checkbox (includentes) con 4 opciones -->
+      <fieldset>
+        <legend>Marca tus favoritos</legend>
+
+        <label><input type="checkbox" name="intereses" value="opcion1" /> Cristiano</label>
+        <label><input type="checkbox" name="intereses" value="opcion2" /> Messi</label>
+        <label><input type="checkbox" name="intereses" value="opcion3" /> Neymar</label>
+        <label><input type="checkbox" name="intereses" value="opcion4" /> Modric</label>
+      </fieldset>
+
+      <!-- Radio (excluyentes) con 4 opciones -->
+      <fieldset>
+        <legend>Escoge uno solo</legend>
+
+        <label><input type="radio" name="seleccion" value="r1" /> Real Madrid</label>
+        <label><input type="radio" name="seleccion" value="r2" /> Barcelona</label>
+        <label><input type="radio" name="seleccion" value="r3" /> Atletico de Madrid</label>
+        <label><input type="radio" name="seleccion" value="r4" /> Sevilla</label>
+      </fieldset>
+
+      <!-- Campo de email -->
+      <fieldset>
+        <legend>Contacto</legend>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" />
+      </fieldset>
+
+      <!-- Campo de archivo -->
+      <fieldset>
+        <legend>Archivo</legend>
+
+        <label for="archivo">Subir archivo</label>
+        <input type="file" id="archivo" name="archivo" />
+      </fieldset>
+
+      <!-- Selector de color -->
+      <fieldset>
+        <legend>Color</legend>
+
+        <label for="color">De que color es la camisa de tu equipo favorito?</label>
+        <input type="color" id="color" name="color" value="#3366ff" />
+      </fieldset>
+
+      <!-- Rango (slider) -->
+      <fieldset>
+        <legend>Cual es la media de tu jugador favorito?</legend>
+
+        <label for="rango">Selecciona un valor (0–100)</label>
+        <input type="range" id="rango" name="rango" min="0" max="100" step="1" value="50" />
+      </fieldset>
+
+      <!-- Botón Submit -->
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</body>
+</html>
+
+
